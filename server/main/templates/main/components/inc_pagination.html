@@ -1,0 +1,11 @@
+{% load static %}
+
+{% block pagination %}
+
+<div class="pagination">
+            <a href="{% url 'main:main' %}" class="circle"></a>
+            <a href="{% url 'main:main' %}" class="circle circle-active"></a>
+            <a href="{% url 'main:main' %}" class="circle"></a>
+        </div>
+
+{% endblock %}

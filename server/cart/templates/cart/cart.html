@@ -1,0 +1,76 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'server/style.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'server/components/inc_menu.html' %}
+{% csrf_token %}
+<h1 class="cart-title">
+    Cart page
+</h1>
+<ul class="product-list"></ul>
+<div class="controll-panel">
+    <button id="cart-submit-button">Submit</button>
+</div>
+
+<script src="{% static 'server/js/counter.js' %}"></script>
+<script src="{% static 'cart/js/items.js' %}"></script>
+
+<script>
+    // const productsList = document.querySelector('.product-list');
+    const items = getLocalValue('products');
+    const identityList = Object.keys(items);
+    const productsUrl = `{% url 'rest_product_detail:list' %}?id__in=${identityList.join(',')}`;
+
+    $.ajax({url: productsUrl})
+        .done(
+        response => {
+            response.map(
+                itm => $('.product-list').append(renderItem(itm, items[itm.id]))
+            )
+        }
+    )
+
+    // fetch(productsUrl)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         data.map(
+    //             // itm => productsList.innerHTML += renderItem(itm, items[itm.id])
+    //             itm => $('.product-list').append(renderItem(itm, items[itm.id]))
+    //         )
+    //     })
+</script>
+
+<script>
+    const createPurchaseUrl = '{% url "cart_api:create" %}'
+    const submitBtn = document.querySelector('#cart-submit-button')
+    const tokenInput = document.querySelector('[name=csrfmiddlewaretoken]')
+
+    submitBtn.addEventListener(
+        'click', evt => {
+            fetch(
+                createPurchaseUrl,
+                {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': tokenInput.value,
+                    },
+                    body: localStorage.getItem('products')
+                },
+            )
+                .then(request => request.json())
+                .then(data => location.replace(data.success_url))
+                body: localStorage.clear();
+        }
+        
+    )
+    
+</script>
+{% endblock %}

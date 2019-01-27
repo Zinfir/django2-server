@@ -1,0 +1,40 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %} 
+    Cart List
+{% endblock %}
+   
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'server/style.css' %}">
+{% endblock %}
+    
+{% block content %}
+
+{% include 'server/components/inc_menu.html' %}
+<h3>Cart list:</h3>
+
+<ul class="product_list">
+    {% for purchase in object_list %}
+    <li>
+        {{ purchase }}
+        <ul>
+            {% for item in purchase.items.all  %}
+            <li>
+                <span>
+                    {{ item.product.name }}: &nbsp;
+                </span>
+                <span>
+                    {{ item.value }}
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    
+    {% endfor %}
+</ul>
+    
+
+{% endblock %}

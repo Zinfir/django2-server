@@ -1,0 +1,25 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %} 
+    Delete Product
+{% endblock %}
+   
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'server/style.css' %}">
+{% endblock %}
+    
+{% block content %}
+
+{% include 'server/components/inc_menu.html' %}
+
+    <form class="model-form" method="POST" action="">
+        {% csrf_token %}
+        <h2>Delete {{ instance.name }}?</h2>
+        <input type="submit" value="Yes">
+        <button value="No">
+            <a href="{% url 'product_list:product_category' pk=1 %}">No</a>
+        </button>
+    </form>
+{% endblock %}

@@ -1,0 +1,256 @@
+{
+    "products" : [
+        {
+            "product_category" : "Modern",
+            "name" : "Fishnet Chair",
+            "image" : "images/slider-img.jpg",
+            "short_desc" : "Seat and back with upholstery made of cold cure foam. Steel",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus.",
+            "special_offer" : "Hot deal",
+            "price" : 150,
+            "quantity" : 7
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Dark Blue Wooden Chair",
+            "image" : "images/controll11_cpLdWh7.jpg",
+            "short_desc" : "Dark Blue Wooden Chair",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 150,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Blue Wooden Chair",
+            "image" : "images/controll_8Z4IMRg.jpg",
+            "short_desc" : "Blue Wooden Chair",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 150,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Red Wooden Chair",
+            "image" : "images/product-detailed-img_h84756Z.jpg",
+            "short_desc" : "Red Wooden Chair",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 200,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Modern",
+            "name" : "Ceiling Black Lamp",
+            "image" : "images/product-5-sm_xLG5bTe.jpg",
+            "short_desc" : "Ceiling Black Lamp",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 100,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Furniture",
+            "name" : "Wall Clock",
+            "image" : "images/product-4-sm_TMLmyM2.jpg",
+            "short_desc" : "Wall Clock",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 100,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Grey Sofa",
+            "image" : "images/product-3-sm_BUuWsgn.jpg",
+            "short_desc" : "Grey Sofa",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 250,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Modern",
+            "name" : "Floor Lamp",
+            "image" : "images/product-2-sm.jpg",
+            "short_desc" : "Floor Lamp",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 100,
+            "quantity" : 1 
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Red Pillow",
+            "image" : "images/product-1-lg_G77ZTZm.jpg",
+            "short_desc" : "Red Pillow",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 50,
+            "quantity" : 1 
+        },
+        {
+            "product_category" : "Classic",
+            "name" : "Wooden Circle Table",
+            "image" : "images/slider2_rSWi61y.jpg",
+            "short_desc" : "Wooden Circle Table",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 250,
+            "quantity" : 1 
+        },
+        {
+            "product_category" : "Office",
+            "name" : "Red Full Iron Chair",
+            "image" : "images/product-4_nDiEL7T.jpg",
+            "short_desc" : "Red Full Iron Chair",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 150,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Jugful",
+            "image" : "images/product-3_HT9wkH4.jpg",
+            "short_desc" : "Jugful",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 50,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Classic",
+            "name" : "Lamp",
+            "image" : "images/product-1_hGRlBMC.jpg",
+            "short_desc" : "Lamp",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 25,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Blue Arm Chair",
+            "image" : "images/product-2_ja1BDP8.jpg",
+            "short_desc" : "Blue Arm Chair",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 250,
+            "quantity" : 2
+        },
+        {
+            "product_category" : "Office",
+            "name" : "Wooden Arm Chair",
+            "image" : "images/promo-img2_7tKUtEt.jpg",
+            "short_desc" : "Wooden Arm Chair",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus.",
+            "special_offer" : "Hot deal",
+            "price" : 250,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Office",
+            "name" : "Red Iron Chair",
+            "image" : "images/promo-img1_7yvuqIL.jpg",
+            "short_desc" : "Red Iron Chair",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus.",
+            "special_offer" : "exclusive",
+            "price" : 200,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Home",
+            "name" : "White Vase",
+            "image" : "images/product-61_gyZ9qbR.jpg",
+            "short_desc" : "White Vase",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Trending",
+            "price" : 100,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Mortar and Pestle",
+            "image" : "images/product-51_3AYKQYV.jpg",
+            "short_desc" : "Mortar and Pestle",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 50,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Classic",
+            "name" : "Wall Lamp",
+            "image" : "images/product-41_oxWM1My.jpg",
+            "short_desc" : "Wall Lamp",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 100,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Home",
+            "name" : "Table Lamp",
+            "image" : "images/product-31_HNGsxTP.jpg",
+            "short_desc" : "Table Lamp",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Hot deal",
+            "price" : 100,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Furniture",
+            "name" : "White Arm Chair",
+            "image" : "images/product-21_LF6PfgU.jpg",
+            "short_desc" : "White Arm Chair",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Trending",
+            "price" : 200,
+            "quantity" : 1
+        },
+        {
+            "product_category" : "Modern",
+            "name" : "Hanging Lamp",
+            "image" : "images/product-11_oKdJsvJ.jpg",
+            "short_desc" : "Hanging Lamp",
+            "description" : "The majesty of Mountains - Ugmonk style. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, amet quae temporibus odit pariatur rerum, exercitationem quam voluptatum odio non quos eaque magnam facere voluptatibus. Minima maiores, perferendis voluptatibus hic autem sed pariatur quod vel deserunt at minus officiis illo aut tempore saepe quidem dolores voluptas quibusdam alias, neque quae!",
+            "special_offer" : "Trending",
+            "price" : 36,
+            "quantity" : 1
+        }
+    ],
+    "categories": [
+        {
+            "name": "All",
+            "description": "All category",
+            "href": "product_list:all"
+        },
+        {
+            "name": "Home",
+            "description": "Home category",
+            "href": "product_list:home"
+        },
+        {
+            "name": "Office",
+            "description": "Office category",
+            "href": "product_list:office"
+        },
+        {
+            "name": "Modern",
+            "description": "Modern category",
+            "href": "product_list:modern"
+        },
+        {
+            "name": "Furniture",
+            "description": "Furniture category",
+            "href": "product_list:furniture"
+        },
+        {
+            "name": "Classic",
+            "description": "Classic category",
+            "href": "product_list:classic"
+        }
+    ]
+}

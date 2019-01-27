@@ -1,0 +1,35 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %} 
+    Profile
+{% endblock %}
+   
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'server/style.css' %}">
+{% endblock %}
+    
+{% block content %}
+
+{% include 'server/components/inc_menu.html' %}
+    <a href="{% url 'product_detail:product_detail' pk=instance.pk %}">
+        <img src="/media/{{ instance.avatar }}" alt="avatar">
+    </a>
+    <p>Username: {{ instance.username|default:'default_username' }}</p>
+    <p>First name: {{ instance.first_name|default:'default_first_name' }}</p>
+    <p>Last name: {{ instance.last_name|default:'default_last_name' }}</p>
+    <p>email: {{ instance.email|default:'default_email' }}</p>
+    <p>phone: {{ instance.phone|default:'default_phone' }}</p>
+    
+    <form class="model-form" method="POST" action="">
+        {% csrf_token %}
+
+        <button value="Update">
+            <a href="{% url 'accounts:update' pk=instance.pk %}">Update</a>
+        </button>
+        <button value="Delete">
+            <a href="{% url 'accounts:delete' pk=instance.pk %}">Delete</a>
+        </button>
+    </form>
+{% endblock %}

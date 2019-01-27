@@ -1,0 +1,46 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %} 
+    Category List
+{% endblock %}
+   
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'server/style.css' %}">
+{% endblock %}
+    
+{% block content %}
+
+{% include 'server/components/inc_menu.html' %}
+
+    <h3>Create New Category</h3>
+    <p></p>
+    <form class="model-form" method="POST" action="">
+    <button value="Update">
+            <a href="{% url 'product_list:category_create' %}">Create</a>
+    </button>
+    </form>
+    <p></p>
+    <p></p>
+
+    <h3>Category list:</h3>
+    <p></p>
+
+    {% for category in list %}
+    <p>Category name: {{ category.name|default:'default_category_name' }}</p>
+    <p>Category description: {{ category.description|default:'default_category_description' }}</p>
+    
+    <form class="model-form" method="POST" action="">
+        {% csrf_token %}
+
+        <button value="Update">
+            <a href="{% url 'product_list:category_update' pk=category.pk %}">Update</a>
+        </button>
+        <button value="Delete">
+            <a href="{% url 'product_list:category_delete' pk=category.pk %}">Delete</a>
+        </button>
+    </form>
+    <p></p>
+    {% endfor %}
+{% endblock %}

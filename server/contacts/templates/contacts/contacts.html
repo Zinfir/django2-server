@@ -1,0 +1,60 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ 'contacts'|title }}
+{% endblock %}
+    
+{% block content %}
+
+    <div class="top">
+        <div class="contact_page_header padding-side">
+            <header class="header-top">
+                <div class="header-contacts">
+                    {% include 'server/components/inc_menu.html' %}
+                </div>
+            </header>
+
+            <div class="contact_us_heading">
+                <h2>Contact us</h2>
+            </div>
+        </div>
+
+        <div class="contact_info_container">
+            <div class="contact_info_box">
+                <span class="pointer_img"><img src="{% static 'contacts/img/pointer.png' %}" alt="pointer"></span>
+                <h2 class="country_name">CALIFORNIA</h2>
+                <h3>Phone:</h3>
+                <p>1900 - 1234 - 5678</p>
+                <h3>Email:</h3>
+                <p>info@interior.com</p>
+                <h3>Address:</h3>
+                <p>12 W 1st St. 90001 Los Angeles, California</p>
+            </div>
+
+            <div class="contact_info_box">
+                <span class="pointer_img"><img src="{% static 'contacts/img/pointer.png' %}" alt="pointer"></span>
+                <h2 class="country_name">CALIFORNIA</h2>
+                <h3>Phone:</h3>
+                <p>1900 - 1234 - 5678</p>
+                <h3>Email:</h3>
+                <p>info@interior.com</p>
+                <h3>Address:</h3>
+                <p>12 W 1st St. 90001 Los Angeles, California</p>
+            </div>
+
+            <div class="contact_info_box">
+                <span class="pointer_img"><img src="{% static 'contacts/img/pointer.png' %}" alt="pointer"></span>
+                <h2 class="country_name">CALIFORNIA</h2>
+                <h3>Phone:</h3>
+                <p>1900 - 1234 - 5678</p>
+                <h3>Email:</h3>
+                <p>info@interior.com</p>
+                <h3>Address:</h3>
+                <p>12 W 1st St. 90001 Los Angeles, California</p>
+            </div>
+        </div>
+    </div>
+        
+{% endblock %}

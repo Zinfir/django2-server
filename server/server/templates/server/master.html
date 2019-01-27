@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        
+        {% block css %}
+            <script src="{% static 'server/assets/js/jquery-3.3.1.min.js' %}"></script>
+            <link rel="stylesheet" href="{% static 'server/css/style.css' %}">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+            
+        {% endblock %}
+
+        {% block js %}
+        {% endblock %}
+        
+    </head>
+
+    <body>
+
+        
+
+        <div class=" container padding-side">
+
+            
+
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        {% block footer %}
+            <footer class="footer">
+                <div class="footer padding-side">
+                    <div class="container-footer-top">
+                        <div class="footer-box-1">
+                            <h3>Contact Us</h3>
+                            <p>132A Bridge Road Richmond VIC&nbsp;Australia.</p>
+                            <p class="p2">Talk to&nbsp;us on&nbsp;1300&nbsp;132 info@interior.com</p>
+                        </div>
+
+                        <div class="footer-box-2">
+                            <div class="footer-box-2-header">
+                                <h3>Useful Information</h3>
+                            </div>
+
+                            <div class="footer-box-2-all-links">
+                                <div class="footer-box-2-1">
+                                    <a href="{% url 'main:main' %}" class="useful-information-link">Sales terms</a>
+                                    <a href="{% url 'main:main' %}" class="useful-information-link">Customer</a>
+                                    <a href="{% url 'main:main' %}" class="useful-information-link">Delivery</a>
+                                </div>
+
+                                <div class="footer-box-2-2">
+                                    <a href="{% url 'main:main' %}" class="useful-information-link">Architect accounts</a>
+                                    <a href="{% url 'main:main' %}" class="useful-information-link">Careers</a>
+                                    <a href="{% url 'main:main' %}" class="useful-information-link">Exchanges &amp;&nbsp;returns</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-box-3">
+                            <h3>Let’s Stay in&nbsp;Touch!</h3>
+
+                            <p>Suscribe to&nbsp;know about our latest news, products and special offers just for suscribers.</p>
+
+                            <div class="textarea-box">
+                                <input type="text" class="comment">
+                                <a class="send-button" href="{% url 'main:main' %}"><img src="{% static 'server/img/send.png' %}" alt="send"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-footer-bottom">
+
+                        <div class="left-footer">
+                            ©&nbsp;Copyright&nbsp;— INTERIOR 2016. All Rights Reserved.
+                        </div>
+
+                        <div class="mid-footer">
+                            <a href="https://www.facebook.com/" class="icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/?lang=ru" class="icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.google.ru/" class="icon google" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="https://www.pinterest.ru/" class="icon printerest" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+
+                        <div class="right-footer">
+                            <a href="{% url 'main:main' %}" class="term-privacy-link">Terms &amp;&nbsp;Conditions&nbsp;/ Privacy policy &amp;&nbsp;Cookies</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        {% endblock %}
+    </body>
+</html>

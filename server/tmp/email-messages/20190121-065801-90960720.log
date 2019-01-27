@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Registration User
+From: info@project.ru
+To: test@mail.ru
+Date: Mon, 21 Jan 2019 03:58:01 -0000
+Message-ID: <154804308157.6492.13886975778727482354@DESKTOP-13QMHSH>
+
+Для подтверждения учетной записи test на портале \ перейдите по ссылке: http://localhost:8000/accounts/verify/test@mail.ru/5012ceb7cc8cd7d4c9cd8d4a35c1f14cb5dd3dc6/
+-------------------------------------------------------------------------------

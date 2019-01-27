@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  # proxy:
+  #   build: ./nginx
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - static:/app/static
+  #     - media:/app/media
+  #   depends_on:
+  #     - server
+
+  cache:
+    image: memcached
+    ports:
+      - "11211:11211"
+    entrypoint:
+      - memcached
+      - -m 256
+
+  smtp:
+    build: ./smtp
+    ports:
+      - 3000:3000
+    command: python3 -m smtpd -n -c DebuggingServer 0.0.0.0:3000
+
+  database:
+    image: postgres:10.6
+
+  server:
+    build: ./server
+    ports:
+      - 8000:8000
+    command: python3 manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - database
+      - smtp
+    volumes:
+      - ./server:/app
+      - static:/app/static
+      - media:/app/media
+
+volumes:
+  media:
+  static:

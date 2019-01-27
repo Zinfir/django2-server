@@ -1,0 +1,112 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+{% load cache %}
+
+{% block title %}
+{{'product list'|title}}
+{% endblock %}
+
+{% block content %}
+
+<div class="top">
+    <div class="contact_page_header padding-side">
+        <header class="header-top">
+            <div class="header">
+                    {% include 'server/components/inc_menu.html' %}
+            </div>
+        </header>
+
+        <div class="contact_us_heading">
+            <h2>Our Products Range</h2>
+        </div>
+    </div>
+    
+    <div class="slider-table padding-side">
+        <div class="products-menu-container">
+                <ul class="products-menu">
+                        {% for category in categories %}
+                        {% cache 3600 categories_list category.name %}
+                        <li>
+                            <a class="{% if instance.pk == category.pk %}
+                            products-menu-active
+                            {% endif %}
+                            submenu-link
+                            products-menu-item" "="" href="{% url 'product_list:product_category' pk=category.pk %}">{{ category.name|upper }}</a>
+                        </li>
+                        {% endcache %}
+                        {% endfor %}
+                        <li><a class="submenu-link products-menu-item" "="" href="{% url 'product_list:category_list' %}">Category list</a></li>
+                </ul>
+                
+            
+        </div>
+
+        <div class="product-box">
+            
+            {% for product in results %}
+
+            {% if product %}
+            <div class="block product-hover">
+                    <img class="product-box-img" src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+    
+                    <div class="product-text">
+                        <a href="{% url 'product_detail:product_detail' pk=product.pk %}">&gt;</a>
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.product_category.name }}</p>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% endfor %}
+        </div>
+
+        <div class="pagination__box">
+            <ul class="pagination__product_list">
+                {% if results.has_previous %}
+                <li>
+                    <a href="?page={{ results.previous_page_number }}">
+                        Previous &nbsp;|
+                    </a>
+                </li>
+                {% endif %}
+            
+                {% for num in results.paginator.page_range %}
+                <li>
+                    &nbsp; 
+                    <a
+                        href="?page={{ num }}"
+                        class="
+                        pagination__control
+                        {% if num == results.number %}
+                        active__pagination_link
+                        {% endif %}
+                        "
+                    >
+                    {{num}} 
+                    </a>
+                    &nbsp; |
+                </li>
+                {% endfor %}
+            
+                {% if results.has_next %}
+                <li>
+                    <a href="?page={{ results.next_page_number }}">
+                        Next
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+        
+        <div class="refresh-container">
+            <a class="refresh-link" href="{% url 'product_list:product_category' pk=instance.pk %}"><img class="refresh-img" src="{% static 'product_list/img/refresh.png' %}" alt="refresh"></a>
+        </div>
+    </div>
+    
+    <div class="space">
+    </div>
+
+</div>
+
+{% endblock %}

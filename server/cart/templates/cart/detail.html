@@ -1,0 +1,36 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %}
+Purchase detail
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'server/style.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'server/components/inc_menu.html' %}
+<h1 class="cart-title">
+    {{ object }}
+</h1>
+<ul class="product-list">
+    {% for itm in object.items.all %}
+    <li class="product-item">
+        <span class="product-item__title">{{ itm.product.name }}</span>
+        <span class="product-item__count">{{ itm.value }}</span>
+    </li>
+    {% endfor %}
+</ul>
+<ul class="total-list">
+    <li class="total-item total-item-count">
+        <span>Total count</span>
+        <span>{{ object.count }}</span>
+    </li>
+    <li class="total-item total-item_cost">
+        <span>Total cost</span>
+        <span>{{ object.cost }}</span>
+    </li>
+</ul>
+{% endblock %}

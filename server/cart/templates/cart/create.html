@@ -1,0 +1,19 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %} 
+    Create Purchase 
+{% endblock %}
+   
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'server/style.css' %}">
+{% endblock %}
+    
+{% block content %}
+
+{% include 'server/components/inc_menu.html' %}
+
+{% include 'server/components/formset.html' with form=form formset=formset %}
+
+{% endblock %}

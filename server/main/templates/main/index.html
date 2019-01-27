@@ -1,0 +1,200 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %}
+{{'home'|title}}
+{% endblock %}
+
+{% block content %}
+
+<div class="top">
+    {% for product in main_title_product %}
+    <div class="slider-home padding-side" style="background-image: url({{product.image.url}});">
+    {% endfor %}
+        {% include 'server/components/inc_menu.html' %}
+
+        <div class="slider-home-text">
+            {% for product in main_title_product %}
+
+            <h3>{{ product.special_offer }}</h3>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.short_desc }}</p>
+
+            {% include 'main/components/inc_order_button.html' with id=product.pk %}
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <div class="slider-row">
+        <div class="menu-slider-row-container">
+
+            <ul class="menu-slider-row">
+                <li><a class="menu-featured slider-row-menu-active" href="{% url 'product_list:product_category' pk=1 %}">Featured</a></li>
+                <li><a class="menu-new" href="{% url 'product_list:product_category' pk=2 %}">New</a></li>
+            </ul>
+
+            {% include 'main/components/inc_explore-link.html' %}
+
+        </div>
+
+        <div class="slider-row-items">
+            {% for product in main_products %}
+
+            {% if forloop.counter0 < 4 %}
+            <div class="product-hover">
+                <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+
+                <div class="product-text">
+                    <a href="{% url 'product_detail:product_detail' pk=product.pk %}">&gt;</a>
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.product_category.name }}</p>
+                </div>
+            </div>
+            {% endif %}
+            
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="slider-two-sides">
+        
+                    {% for product in main_products %}
+            
+                    {% if forloop.counter0 == 4 %}
+            
+                    <div class="slider-left" style="background-image: url({{product.image.url}});">
+                        <h3>{{ product.special_offer }}</h3>
+            
+                        <h2>{{ product.name }}</h2>
+            
+                        <p>{{ product.description }}</p>
+            
+                        {% include 'main/components/inc_order_button.html' with id=product.pk %}
+                    </div>
+            
+                    {% endif %}
+            
+                    {% endfor %}
+            
+                    {% for product in main_products %}
+            
+                    {% if forloop.counter0 == 5 %}
+            
+                    <div class="slider-right" style="background-image: url({{product.image.url}});">
+                        <h3>{{ product.special_offer }}</h3>
+            
+                        <h2>{{ product.name }}</h2>
+            
+                        <p>{{ product.description }}</p>
+            
+                        {% include 'main/components/inc_order_button.html' with id=product.pk %}
+                    </div>
+            
+                    {% endif %}
+            
+                    {% endfor %}
+                </div>
+    </div>
+
+    <div class="slider-table">
+        <div class="slider-table-header">
+            <a href="{% url 'product_list:product_category' pk=1 %}" class="trending_product">Trending Products</a>
+
+            {% include 'main/components/inc_explore-link.html' %}
+        </div>
+
+        <div class="product-box">
+                {% for product in main_products %}
+
+                {% if forloop.counter0 < 12 and forloop.counter0 > 5 %}
+                <div class="block product-hover">
+                        <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+        
+                        <div class="product-text">
+                            <a href="{% url 'product_detail:product_detail' pk=product.pk %}">&gt;</a>
+                            <h3>{{ product.name }}</h3>
+                            <p>{{ product.product_category.name }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% endfor %}
+        </div>
+
+        <div class="refresh-container">
+        </div>
+    </div>
+
+    {% for product in main_products %}
+    {% if forloop.counter0 == 12 %}
+    <div class="slider-one-product" style="background-image: url({{product.image.url}});">
+        
+        <div class="slider-one-product-text">
+            <h3>{{ product.special_offer }}</h3>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            {% include 'main/components/inc_order_button.html' with id=product.pk %}
+        </div>
+        
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <div class="slider-mixed-table padding-side">
+        <div class="big-box product-hover">
+            {% for product in main_products reversed %}
+
+            {% if forloop.counter0 == 4 %}
+            <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+
+            <div class="product-text">
+                <a href="{% url 'product_detail:product_detail' pk=product.pk %}">&gt;</a>
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.product_category.name }}</p>
+            </div>
+            {% endif %}
+
+            {% endfor %}
+        </div>
+
+        <div class="container-mid-box">
+            {% for product in main_products reversed %}
+
+            {% if forloop.counter0 < 4 %}
+            <div class="mid-box product-hover">
+                    <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+
+                <div class="product-text">
+                    <a href="{% url 'product_detail:product_detail' pk=product.pk %}">&gt;</a>
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.product_category.name }}</p>
+                </div>
+            </div>
+
+            {% endif %}
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="slider-mobile-app padding-side">
+        <div class="slider-mobile-app-text">
+            <h3>mobile app</h3>
+            <h2>Find. Follow.</h2>
+            <h2> Favorite.</h2>
+            <p>Save your favorites and share your style.</p>
+            <div class="container-buttons">
+                <div class="appstore-button"><a href="https://www.apple.com/ru/ios/app-store/" target="_blank"><img src="{% static 'main/img/app-store.jpg' %}" alt="app-store"></a></div>
+                <div class="google-button"><a href="https://play.google.com/store?hl=ru" target="_blank"><img src="{% static 'main/img/google-play.jpg' %}" alt="google-play"></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

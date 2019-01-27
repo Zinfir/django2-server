@@ -1,0 +1,70 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %} 
+    Test
+{% endblock %}
+
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+<script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+   
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'server/css/style.css' %}">
+{% endblock %}
+
+<section class="container">
+    
+{% block content %}
+
+{% include 'server/components/inc_menu.html' %}
+
+<h3>This is test page</h3>
+
+{% for product in results %}
+{% if product %}
+<p>{{ forloop.counter }}: {{ product.name }}</p>
+{% endif %}
+{% endfor %}
+    
+
+<ul class="pagination__product_list">
+    {% if results.has_previous %}
+    <li class="pagination__control_previous">
+        <a
+            href="?page={{ results.previous_page_number }}"
+            class="pagination__control"
+        >
+            Previous
+        </a>
+    </li>
+    {% endif %}
+
+    {% for num in results.paginator.page_range %}
+    <li class="pagination__control">
+        <a
+            href="?page={{ num }}"
+            class="pagination__control"
+        >
+            {{num}}
+        </a>
+    </li>
+    {% endfor %}
+
+    {% if results.has_next %}
+    <li class="pagination__control_next">
+        <a
+            href="?page={{ results.next_page_number }}"
+            class="pagination__control"
+        >
+            Next
+        </a>
+    </li>
+    {% endif %}
+</ul>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt facilis debitis, distinctio molestias tenetur ipsam magni quo veniam quam! Consequatur iusto maiores aut modi rerum corporis, fugiat, dolorum iure doloribus, consequuntur ipsum laboriosam aliquid culpa et maxime ab ipsa id repudiandae ea at! Fuga, modi atque eos deleniti temporibus facere totam iusto placeat voluptatem dolor at voluptatum dolorem? Recusandae ea saepe, quo iusto illo cumque architecto ducimus ullam deserunt laudantium eveniet corrupti, sequi perspiciatis facilis ex earum cupiditate? Beatae voluptatem iste doloribus dolores dolorum non repudiandae voluptatum adipisci laudantium. Quidem commodi aut explicabo voluptatum culpa pariatur aliquam, ipsa illum impedit error blanditiis eius omnis, facilis deleniti. Accusamus corrupti sed, non quam illum aliquam necessitatibus illo mollitia, fugit, enim minus inventore eaque in repellendus autem quibusdam incidunt quo nemo quos tempore maxime beatae provident aliquid animi. Laudantium odit animi aut facere exercitationem minima perferendis placeat excepturi, ipsa, non dolorum saepe fugit? Necessitatibus ipsa deleniti ad, minima placeat voluptatem odit, quod debitis natus vel corrupti obcaecati cupiditate ratione impedit! Aut sunt voluptas necessitatibus consequatur. Necessitatibus voluptatum quae enim minima iste, corporis qui explicabo sapiente at suscipit incidunt itaque unde. Maiores qui omnis laudantium cupiditate! Saepe nam cum ratione? Veniam, temporibus. Reiciendis?</p>
+
+{% endblock %}
+
+</section>

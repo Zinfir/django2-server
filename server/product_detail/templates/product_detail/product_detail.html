@@ -1,0 +1,103 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %}
+{{'product detail'|title}}
+{% endblock %}
+        
+{% block content %}
+
+<div class="top">
+    <div class="product_page_header padding-side">
+        <header class="header-top">
+            <div class="header">
+                {% include 'server/components/inc_menu.html' %}
+            </div>
+        </header>
+    </div>
+            
+    <div class="product_page_subheader padding-side">
+            <ul id="rest_page_menu">
+                </ul>
+                <script type="text/javascript" src="{% static 'server/rest_page_menu.js' %}"></script>
+                <script>
+                    axios.get('http://localhost:8000/api/categories/')
+                    .then(renderData)
+                </script>
+          </div>
+    
+
+    {% with img=instance.image %}
+    <div class="product_details_container padding-side">
+
+        <div class="product_images">
+                <div class="product_detailed_image">
+                <a href="{% url 'product_detail:product_detail' pk=instance.pk %}">
+                    <img src="{{ img.url }}" alt="{{ img.short_desc }}">
+                </a>
+                </div>
+        </div>
+
+    {% endwith %}
+
+        <div id="product-item-{{ instance.id }}" class="product_info product-item">
+            <h2>{{ instance.name }}</h2>
+            <h3>{{ instance.special_offer }}</h3>
+            <div class="price-container">
+                <p class="price-text">$</p>
+                <p class="price"> {{ instance.price }}</p>
+                <p class="price-text">/sq</p>
+            </div>
+            <button itemid="{{ instance.id }}" class="product-item__button">
+                <span class="product-item__button-inner">
+                    Order Us
+                </span>
+            </button>
+            <!-- <a class="product_order_button" href="{% url 'product_detail:product_detail' pk=instance.pk %}">Order Us<img src="{% static 'product_detail/img/arrow1.png' %}" alt="arrow"></a> -->
+            <p class="product-page-text">{{ instance.description }}</p>
+        </div>
+    </div>
+
+    <div class="slider-table">
+        <div class="slider-table-header">
+            <a href="{% url 'product_list:product_category' pk=1 %}" class="trending_product">Trending Products</a>
+
+            {% include 'product_detail/components/inc_explore-link.html' %}
+        </div>
+
+        <div id="detail_page_extra_products" class="product-box">                   
+        </div>
+        <script type="text/javascript" src="{% static 'server/rest_detail_page_products.js' %}"></script>
+        <script>
+            axios.get('http://localhost:8000/api/products/')
+            .then(renderPageData)
+        </script>
+
+        <div class="refresh-container">
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'server/js/counter.js' %}"></script>
+<script>
+    const items = document.querySelectorAll('.product-item');
+    items.forEach(
+        itm => {
+            const btn = itm.querySelector('button')
+            btn.addEventListener(
+                'click',
+                evt => { 
+                    console.log("Hello, World!");
+                    incLocalValue(
+                        'products', btn.getAttribute('itemid')
+                    ) 
+                }
+            )
+        }
+    );
+
+</script>
+
+{% endblock %}
+

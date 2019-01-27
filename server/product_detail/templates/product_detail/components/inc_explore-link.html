@@ -1,0 +1,7 @@
+{% load static %}
+
+{% block explore-link %}
+
+<a class="explore-link" href="{% url 'product_list:product_category' pk=1 %}">explore all<img src="{% static 'main/img/arrow.png' %}" alt="arrow"></a>
+
+{% endblock %}

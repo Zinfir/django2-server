@@ -1,0 +1,42 @@
+{% extends 'server/master.html' %}
+
+{% load static %}
+
+{% block title %} 
+    Category Create
+{% endblock %}
+   
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'server/style.css' %}">
+{% endblock %}
+    
+{% block content %}
+
+{% include 'server/components/inc_menu.html' %}
+
+    <form class="model-form" method="POST" action="">
+        {% csrf_token %}
+
+        {% for err in form.not_dield_errors %}
+        <span class="form__alert_danger">
+            {{ err }}
+        </span>
+        {% endfor %}
+
+        {% for field in form %}
+        <div class="form-field">
+            <label class="form-field__label" for="{{ field.name }}">
+                {{ field.label }}
+            </label>
+            {{ field }}
+
+            {% for err in field.errors %}
+            <small class="form-field__error">
+                {{ err }}
+            </small>
+            {% endfor %}
+        </div>
+        {% endfor %}
+        <input type="submit", value="Submit">
+    </form>
+{% endblock %}
